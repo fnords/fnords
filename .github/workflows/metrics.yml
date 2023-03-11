@@ -8,10 +8,10 @@ jobs:
   music:
     runs-on: ubuntu-latest
     steps:
-      - name: Last.fm  - Recently listed
+      - name: Last.fm  - Top artists
         uses: lowlighter/metrics@latest
         with:
-          filename: music.svg
+          filename: music-artists.svg
           token: NOT_NEEDED
           base: ""
           plugin_music_token: ${{ secrets.LASTFM_TOKEN }}
@@ -19,3 +19,15 @@ jobs:
           plugin_music_provider: lastfm
           plugin_music_user: siljexnord
           plugin_music_top_type: artists
+
+      - name: Last.fm  - Top tracks
+        uses: lowlighter/metrics@latest
+        with:
+          filename: music-tracks.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_music_token: ${{ secrets.LASTFM_TOKEN }}
+          plugin_music: yes
+          plugin_music_provider: lastfm
+          plugin_music_user: siljexnord
+          plugin_music_top_type: tracks
