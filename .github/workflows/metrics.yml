@@ -1,0 +1,20 @@
+name: Metrics
+on:
+  schedule: [{cron: "0 * * * *"}]
+  workflow_dispatch:
+  push: {branches: ["main"]}
+
+jobs:
+  music:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Last.fm  - Recently listed
+        uses: lowlighter/metrics@latest
+        with:
+          filename: music.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_music_token: ${{ secrets.LASTFM_TOKEN }}
+          plugin_music: yes
+          plugin_music_provider: lastfm
+          plugin_music_user: siljexnord
