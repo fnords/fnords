@@ -2,9 +2,5 @@
 
 ![my most listened to artists last month according to last.fm](music-artists.svg) ![my most listened to tracks last month according to last.fm](music-tracks.svg)
 
-<style type="text/css">
-  .left{float:left;}
-</style>
-
-<img class="left" src="music-artists.svg" />
-<img class="left" src="music-tracks.svg" />
+<img style="float: left" src="music-artists.svg" />
+<img style="float: left" src="music-tracks.svg" />
